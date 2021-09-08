@@ -1,0 +1,39 @@
+.list-food {
+    margin-top: 60px;
+    text-align: center;
+    .list-food__title {
+        font-size: 28px;
+    }
+    .list-food__search {
+        background: none !important;
+        ::placeholder {
+            color: #22232d;
+            opacity: 1;
+            font-family: "Nunito", sans-serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+        border-radius: 14px;
+        width: 60%;
+        display: inline-flex;
+        margin: 35px 0;
+        padding: 10px;
+
+        font-weight: 900;
+        .search-button {
+            background-color: #ffcb00;
+            font-weight: 700;
+        }
+    }
+    .list-food__view {
+        text-align: end;
+        margin-right: 20%;
+    }
+    .list-food__filter {
+        margin: 35px;
+    }
+    .list-food__detail {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
