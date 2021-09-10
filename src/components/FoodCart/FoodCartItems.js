@@ -60,4 +60,31 @@ export const FoodCartItems = [
         url: "#",
         cName: "item-details",
     },
+    {
+        name: "Lươn hấp sả ớt",
+        img: imgFoodCart_4,
+        description:
+            "Ếch lột da chiên dòn kết hợp với vị nước sốt siêu cay đậm đà hương vị",
+        price: 90000,
+        url: "#",
+        cName: "item-details",
+    },
+    {
+        name: "Bia Sài Gòn (Chai)",
+        img: imgFoodCart_5,
+        description:
+            "Ếch lột da chiên dòn kết hợp với vị nước sốt siêu cay đậm đà hương vị",
+        price: 90000,
+        url: "#",
+        cName: "item-details",
+    },
+    {
+        name: "CocaCola (lon mi nhon)",
+        img: imgFoodCart_6,
+        description:
+            "Ếch lột da chiên dòn kết hợp với vị nước sốt siêu cay đậm đà hương vị",
+        price: 90000,
+        url: "#",
+        cName: "item-details",
+    },
 ];

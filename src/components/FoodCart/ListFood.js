@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Textfield from "@atlaskit/textfield";
 import Button from "@atlaskit/button";
 import Avatar from "@atlaskit/avatar";
 import FoodCartDetails from "./FoodCartDetails";
 import TagFilter from "../TagFilter/TagFilter";
 import View from "../View/View";
+import GridFood from "./GridFood";
 
 const ListFood = () => {
+    const [state, setState] = useState({ clicked: false });
+    const handleClick = () => {
+        setState({ clicked: !state.clicked });
+        console.log(state);
+    };
     return (
         <div className="list-food">
             <h1 className="list-food__title">Danh sách món ăn 😋</h1>
@@ -26,14 +32,18 @@ const ListFood = () => {
                 }
             />
             <div className="list-food__view">
-                <View />
+                <View state={state} handleClick={handleClick} />
             </div>
             <div className="list-food__filter">
                 <TagFilter />
             </div>
             <div className="list-food__detail">
-                <FoodCartDetails />
+                {state.clicked ? <GridFood /> : <FoodCartDetails />}
             </div>
+            <div className="goto-cart">Xem giỏ hàng</div>
+            <div>***</div>
+            <div className="list-food__review">Đánh giá (Đang phát triển)</div>
+            <div>***</div>
         </div>
     );
 };

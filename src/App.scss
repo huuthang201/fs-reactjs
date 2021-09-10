@@ -7,9 +7,9 @@
 @import "./Style/FoodCart/FoodCart";
 @import "./Style/FoodCart/ListFood";
 @import "./Style/FoodCart/FoodCartDetails";
+@import "./Style/FoodCart/GridFood";
 
 // NavBar
-
 @import "./Style/NavBar/NavBar";
 @import "./Style/NavBar/Button";
 
@@ -18,6 +18,9 @@
 
 // View
 @import "./Style/View/View";
+
+// Footer
+@import "./Style/Footer/Footer";
 
 // Start Code Sass App
 * {

@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const View = () => {
-    const [state, setState] = useState({ clicked: false });
-    const handleClick = () => {
-        setState({ clicked: !state.clicked });
-        console.log(state);
-    };
+const View = ({ state, handleClick }) => {
     return (
         <div className="view-container">
             <div> Chế độ xem: </div>
