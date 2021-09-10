@@ -14,7 +14,7 @@ function App() {
                 <Navbar />
             </div>
             <div className="container">
-                <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <BrowserRouter basename="/fs-reactjs">
                     <Switch>
                         <Route exact path="/" component={ListFood}></Route>
                         <Route exact path="/cart" component={Cart}></Route>
