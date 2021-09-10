@@ -37,7 +37,7 @@ const Cart = () => {
                 <div className="cart-total__money">
                     Tổng tiền<Button>90000 ₫</Button>
                 </div>
-
+                <div></div>
                 <div className="cart-total__timeremaning">
                     Thời gian chờ <Button>10:00 Phút</Button>
                 </div>
