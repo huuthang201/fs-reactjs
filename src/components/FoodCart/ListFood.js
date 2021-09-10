@@ -40,7 +40,9 @@ const ListFood = () => {
             <div className="list-food__detail">
                 {state.clicked ? <GridFood /> : <FoodCartDetails />}
             </div>
-            <div className="goto-cart">Xem giỏ hàng</div>
+            <div className="goto-cart">
+                <a href="/cart">Xem giỏ hàng</a>
+            </div>
             <div>***</div>
             <div className="list-food__review">Đánh giá (Đang phát triển)</div>
             <div>***</div>

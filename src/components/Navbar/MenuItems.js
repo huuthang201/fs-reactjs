@@ -1,12 +1,12 @@
 export const MenuItems = [
     {
         title: "Trang chủ",
-        url: "#",
+        url: "/",
         cName: "nav-link",
     },
     {
         title: "Giới thiệu",
-        url: "#",
+        url: "/about",
         cName: "nav-link",
     },
     {

@@ -46,6 +46,14 @@
         font-size: 0.9rem;
         font-weight: 800;
         cursor: pointer;
+        a {
+            text-decoration: none;
+            color: #22232d;
+            &:hover {
+                color: #414147;
+                padding: 0.5rem;
+            }
+        }
     }
     .list-food__review {
         margin: 60px 43%;
