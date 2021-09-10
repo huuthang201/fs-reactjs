@@ -16,18 +16,10 @@ function App() {
             <div className="container">
                 <BrowserRouter basename="/fs-reactjs">
                     <Switch>
-                        <Route path="/" exact>
-                            <ListFood />
-                        </Route>
-                        <Route path="/cart" exact>
-                            <Cart />
-                        </Route>
-                        <Route path="/about" exact>
-                            <About />
-                        </Route>
-                        <Route path="/about" exact>
-                            <Contact />
-                        </Route>
+                        <Route exact path="/" component={ListFood}></Route>
+                        <Route exact path="/cart" component={Cart}></Route>
+                        <Route exact path="/about" component={About}></Route>
+                        <Route exact path="/about" component={Contact}></Route>
                     </Switch>
                 </BrowserRouter>
             </div>
