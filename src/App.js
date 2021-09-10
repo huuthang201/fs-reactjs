@@ -14,7 +14,7 @@ function App() {
                 <Navbar />
             </div>
             <div className="container">
-                <BrowserRouter>
+                <BrowserRouter basename="/fs-reactjs">
                     <Switch>
                         <Route path="/" exact>
                             <ListFood />
@@ -25,7 +25,7 @@ function App() {
                         <Route path="/about" exact>
                             <About />
                         </Route>
-                        <Route path="/contact" exact>
+                        <Route path="/about" exact>
                             <Contact />
                         </Route>
                     </Switch>

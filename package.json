@@ -2,7 +2,7 @@
     "name": "orderfood",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://huuthang201.github.io/foodshop-reactjs",
+    "homepage": "http://huuthang201.github.io/fs-reactjs",
     "dependencies": {
         "@atlaskit/avatar": "^20.4.2",
         "@atlaskit/button": "^16.1.1",

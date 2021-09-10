@@ -11,7 +11,7 @@ export const MenuItems = [
     },
     {
         title: "Liên hệ",
-        url: "#",
+        url: "/contact",
         cName: "nav-link",
     },
     {
