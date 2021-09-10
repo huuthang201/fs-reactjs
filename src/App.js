@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Cart from "./components/Cart/Cart";
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
                         </Route>
                         <Route path="/about" exact>
                             <About />
+                        </Route>
+                        <Route path="/about" exact>
+                            <Contact />
                         </Route>
                     </Switch>
                 </BrowserRouter>
