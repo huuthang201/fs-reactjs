@@ -1,5 +1,6 @@
 import React from "react";
 import AboutShop from "../../img/EchChienGion.jpg";
+
 const About = () => {
     return (
         <div className="about-shop">

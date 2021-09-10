@@ -14,12 +14,16 @@ function App() {
                 <Navbar />
             </div>
             <div className="container">
-                <BrowserRouter basename="/fs-reactjs">
+                <BrowserRouter basename={process.env.PUBLIC_URL}>
                     <Switch>
                         <Route exact path="/" component={ListFood}></Route>
                         <Route exact path="/cart" component={Cart}></Route>
                         <Route exact path="/about" component={About}></Route>
-                        <Route exact path="/about" component={Contact}></Route>
+                        <Route
+                            exact
+                            path="/contact"
+                            component={Contact}
+                        ></Route>
                     </Switch>
                 </BrowserRouter>
             </div>
