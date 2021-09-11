@@ -41,7 +41,7 @@ const ListFood = () => {
                 {state.clicked ? <GridFood /> : <FoodCartDetails />}
             </div>
             <div className="goto-cart">
-                <a href="/cart">Xem giỏ hàng</a>
+                <a href="/fs-reactjs#/cart">Xem giỏ hàng</a>
             </div>
             <div>***</div>
             <div className="list-food__review">Đánh giá (Đang phát triển)</div>

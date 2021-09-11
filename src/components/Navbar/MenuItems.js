@@ -1,17 +1,17 @@
 export const MenuItems = [
     {
         title: "Trang chủ",
-        url: "/",
+        url: "/fs-reactjs#/",
         cName: "nav-link",
     },
     {
         title: "Giới thiệu",
-        url: "/about",
+        url: "/fs-reactjs#/about",
         cName: "nav-link",
     },
     {
         title: "Liên hệ",
-        url: "/contact",
+        url: "/fs-reactjs#/contact",
         cName: "nav-link",
     },
     {
