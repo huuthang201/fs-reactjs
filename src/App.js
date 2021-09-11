@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ListFood from "./components/FoodCart/ListFood";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
@@ -14,7 +14,7 @@ function App() {
                 <Navbar />
             </div>
             <div className="container">
-                <BrowserRouter basename="/fs-reactjs">
+                <Router basename={process.env.PUBLIC_URL}>
                     <Switch>
                         <Route exact path="/" component={ListFood}></Route>
                         <Route exact path="/cart" component={Cart}></Route>
@@ -25,7 +25,7 @@ function App() {
                             component={Contact}
                         ></Route>
                     </Switch>
-                </BrowserRouter>
+                </Router>
             </div>
             <div className="footer">
                 <Footer />
