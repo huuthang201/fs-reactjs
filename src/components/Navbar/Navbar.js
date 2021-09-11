@@ -32,7 +32,7 @@ const Navbar = () => {
             </ul>
             <Button>Sign Up</Button>
             <div className="menu-cart">
-                <a href="/fs-reactjs/cart">
+                <a href="/cart">
                     <i className="fas fa-shopping-bag"></i>
                 </a>
             </div>
