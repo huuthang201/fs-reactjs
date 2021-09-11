@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import ListFood from "./components/FoodCart/ListFood";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
