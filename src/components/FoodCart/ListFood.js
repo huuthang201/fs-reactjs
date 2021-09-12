@@ -7,7 +7,7 @@ import TagFilter from "../TagFilter/TagFilter";
 import View from "../View/View";
 import GridFood from "./GridFood";
 
-const ListFood = () => {
+const ListFood = ({ Foods, onAdd }) => {
     const [state, setState] = useState({ clicked: false });
     const handleClick = () => {
         setState({ clicked: !state.clicked });
@@ -38,7 +38,11 @@ const ListFood = () => {
                 <TagFilter />
             </div>
             <div className="list-food__detail">
-                {state.clicked ? <GridFood /> : <FoodCartDetails />}
+                {state.clicked ? (
+                    <GridFood Foods={Foods} onAdd={onAdd} />
+                ) : (
+                    <FoodCartDetails Foods={Foods} onAdd={onAdd} />
+                )}
             </div>
             <div className="goto-cart">
                 <a href="/fs-reactjs#/cart">Xem giỏ hàng</a>

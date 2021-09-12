@@ -1,31 +1,33 @@
 import React from "react";
-import { FoodCartItems } from "./FoodCartItems";
+// import { v4 } from "uuid";
+// import { useCallback } from "react";
 
-const FoodCartDetails = () => {
+const FoodCartDetails = ({ Foods, onAdd }) => {
     return (
         <div className="food-cart__details">
             <ul>
-                {FoodCartItems.map((item, index) => {
-                    return (
-                        <li key={index} className="food-cart__details--item">
-                            <div className="food-cart__details--container">
-                                <div className="food-cart__top">
-                                    <div className="item-name">{item.name}</div>
-                                    <img src={item.img} alt="" />
+                {Foods.map((food) => (
+                    <li key={food.id} className="food-cart__details--item">
+                        <div className="food-cart__details--container">
+                            <div className="food-cart__top">
+                                <div className="item-name">{food.name}</div>
+                                <img src={food.img} alt="" />
+                            </div>
+                            <div className="food-cart__bottom">
+                                <div className="item-description">
+                                    {food.description}
                                 </div>
-                                <div className="food-cart__bottom">
-                                    <div className="item-description">
-                                        {item.description}
-                                    </div>
-                                    <div className="item-price">
-                                        {item.price} ₫
-                                    </div>
-                                    <a href={item.url}>Đặt ngay</a>
+                                <div className="item-price">{food.price} ₫</div>
+                                <div
+                                    className="item-choose"
+                                    onClick={() => onAdd(food)}
+                                >
+                                    Đặt ngay
                                 </div>
                             </div>
-                        </li>
-                    );
-                })}
+                        </div>
+                    </li>
+                ))}
             </ul>
         </div>
     );

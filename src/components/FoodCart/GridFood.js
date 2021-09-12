@@ -1,11 +1,10 @@
 import React from "react";
-import { FoodCartItems } from "./FoodCartItems";
 
-const GridFood = () => {
+const GridFood = ({ Foods }) => {
     return (
         <div className="Gfood-cart__details">
             <ul>
-                {FoodCartItems.map((item, index) => {
+                {Foods.map((item, index) => {
                     return (
                         <li key={index} className="Gfood-cart__details--item">
                             <div className="Gfood-cart__details--container">
