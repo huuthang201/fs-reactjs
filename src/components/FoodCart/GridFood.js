@@ -1,35 +1,35 @@
 import React from "react";
 
-const GridFood = ({ Foods }) => {
+const GridFood = ({ Foods, onAdd }) => {
     return (
         <div className="Gfood-cart__details">
             <ul>
-                {Foods.map((item, index) => {
-                    return (
-                        <li key={index} className="Gfood-cart__details--item">
-                            <div className="Gfood-cart__details--container">
-                                <div className="Gfood-cart__top">
-                                    <div className="Gitem-img">
-                                        <img src={item.img} alt="" />
-                                    </div>
-                                    <div className="Gitem-price">
-                                        {item.price} ₫
-                                    </div>
+                {Foods.map((food) => (
+                    <li key={food.id} className="Gfood-cart__details--item">
+                        <div className="Gfood-cart__details--container">
+                            <div className="Gfood-cart__top">
+                                <div className="Gitem-img">
+                                    <img src={food.img} alt="" />
                                 </div>
-                                <div className="Gfood-cart__bottom">
-                                    <div className="Gitem-name">
-                                        {item.name}
-                                    </div>
-                                    <div className="Gitem-description">
-                                        {item.description}
-                                    </div>
-
-                                    <a href={item.url}>Đặt ngay</a>
+                                <div className="Gitem-price">
+                                    {food.price} ₫
                                 </div>
                             </div>
-                        </li>
-                    );
-                })}
+                            <div className="Gfood-cart__bottom">
+                                <div className="Gitem-name">{food.name}</div>
+                                <div className="Gitem-description">
+                                    {food.description}
+                                </div>
+                                <div
+                                    className="Gitem-choose"
+                                    onClick={() => onAdd(food)}
+                                >
+                                    Đặt ngay
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </div>
     );

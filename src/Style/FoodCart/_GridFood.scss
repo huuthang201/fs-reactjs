@@ -55,8 +55,7 @@
                         }
                     }
 
-                    a {
-                        // margin-top: 20px;
+                    .Gitem-choose {
                         color: #000;
                         text-decoration: none;
                         background: #ffcb00;
@@ -64,6 +63,14 @@
                         border-radius: 12px;
                         font-size: 0.9rem;
                         font-weight: 800;
+                        margin-bottom: 20px;
+                        margin-left: 35%;
+                        margin-right: 35%;
+                        cursor: pointer;
+                        &:hover {
+                            background: #f5db73;
+                            color: #414147;
+                        }
                     }
                 }
             }

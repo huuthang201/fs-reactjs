@@ -6,12 +6,26 @@ import Navbar from "./components/Navbar/Navbar";
 import Cart from "./components/Cart/Cart";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FoodCartItems from "./components/FoodCart/FoodCartItems";
+
+const TODO_APP_STORAGE_KEY = "TODO_APP";
 
 function App() {
     const { Foods } = FoodCartItems;
     const [cartItems, setCartItems] = useState([]);
+
+    useEffect(() => {
+        const storageTodoList = localStorage.getItem(TODO_APP_STORAGE_KEY);
+        if (storageTodoList) {
+            setCartItems(JSON.parse(storageTodoList));
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem(TODO_APP_STORAGE_KEY, JSON.stringify(cartItems));
+    }, [cartItems]);
+
     const onAdd = (food) => {
         const exist = cartItems.find((x) => {
             // console.log(x);
