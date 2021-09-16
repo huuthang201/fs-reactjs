@@ -1,4 +1,5 @@
 import React from "react";
+import { ToastContainer } from "react-toastify";
 
 const GridFood = ({ Foods, onAdd }) => {
     return (
@@ -31,6 +32,17 @@ const GridFood = ({ Foods, onAdd }) => {
                     </li>
                 ))}
             </ul>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

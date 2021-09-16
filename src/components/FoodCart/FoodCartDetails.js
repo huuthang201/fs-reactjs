@@ -1,7 +1,7 @@
 import React from "react";
 // import { v4 } from "uuid";
 // import { useCallback } from "react";
-
+import { ToastContainer } from "react-toastify";
 const FoodCartDetails = ({ Foods, onAdd }) => {
     return (
         <div className="food-cart__details">
@@ -29,6 +29,17 @@ const FoodCartDetails = ({ Foods, onAdd }) => {
                     </li>
                 ))}
             </ul>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

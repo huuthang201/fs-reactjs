@@ -2,7 +2,7 @@ import React from "react";
 import Button from "@atlaskit/button";
 import Avatar from "@atlaskit/avatar";
 import { useCallback, useState } from "react";
-
+import { ToastContainer } from "react-toastify";
 import Modal, {
     ModalBody,
     ModalFooter,
@@ -45,6 +45,7 @@ const Cart = ({ onAdd, onRemove, onDelete, cartItems, countCartItems }) => {
                         <div className="cart-food-money">
                             {Foods.price * Foods.quantity} ₫
                         </div>
+
                         <div className="cart-food__button">
                             <Button
                                 className="btn-choose"
@@ -52,6 +53,7 @@ const Cart = ({ onAdd, onRemove, onDelete, cartItems, countCartItems }) => {
                             >
                                 -
                             </Button>
+
                             <Button className="btn-disable" isDisabled="true">
                                 {Foods.quantity}
                             </Button>
@@ -70,6 +72,17 @@ const Cart = ({ onAdd, onRemove, onDelete, cartItems, countCartItems }) => {
                         </div>
                     </div>
                 ))}
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
             <div className="cart-total">
                 <div className="cart-total__quantity">

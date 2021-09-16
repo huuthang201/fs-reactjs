@@ -7,11 +7,43 @@ import Cart from "./components/Cart/Cart";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import FoodCartItems from "./components/FoodCart/FoodCartItems";
 
 const TODO_APP_STORAGE_KEY = "TODO_APP";
 
 function App() {
+    const notify = () =>
+        toast.success("Thêm món thành công!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    const notify1 = () =>
+        toast("Bớt món thành công!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+    const notify2 = () =>
+        toast.error("Xóa món thành công!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     const { Foods } = FoodCartItems;
     const [cartItems, setCartItems] = useState([]);
 
@@ -42,9 +74,11 @@ function App() {
                         : x
                 )
             );
+            notify();
         } else {
             setCartItems([...cartItems, { ...food, quantity: 1 }]);
             // console.log(food);
+            notify();
             console.log(cartItems);
         }
     };
@@ -52,6 +86,7 @@ function App() {
         const exist = cartItems.find((x) => x.id === food.id);
         if (exist.quantity === 1) {
             setCartItems(cartItems.filter((x) => x.id !== food.id));
+            notify1();
         } else {
             setCartItems(
                 cartItems.map((x) =>
@@ -60,11 +95,13 @@ function App() {
                         : x
                 )
             );
+            notify1();
         }
     };
     const onDelete = (food) => {
         // const exist = cartItems.find((x) => x.id === food.id);
         setCartItems(cartItems.filter((x) => x.id !== food.id));
+        notify2();
     };
     return (
         <div className="App">
