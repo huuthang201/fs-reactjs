@@ -6,6 +6,11 @@
 - Font Awesome
 - Style: Styled-Component, SCSS
 - ..
+- Data: LocalStorage
+
+# Github Pages
+
+https://huuthang.xyz/fs-reactjs/#/
 
 ## Available Scripts
 
